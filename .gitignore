@@ -1,3 +1,7 @@
+#Project specfic 
+README_copy.md
+playground.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
