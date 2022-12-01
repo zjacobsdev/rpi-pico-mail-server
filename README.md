@@ -1,6 +1,9 @@
 <h1 align="center">
-<span>Mail Watch</span>
-<p>Backend</p>
+<span>Mail<span style= "color:red">Watch</span></span>
+<h4 align="center">
+______backend______
+</h4>
+
 </h1>
 
 <div align="center">
@@ -18,10 +21,6 @@
 
 <br />
 
-[![license](https://img.shields.io/github/license/dec0dOS/amazing-github-template.svg?style=flat-square)](LICENSE)
-
-[![made with hearth by dec0dOS](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-dec0dOS-ff1414.svg?style=flat-square)](https://github.com/dec0dOS)
-
 </div>
 
 <details open="open">
@@ -29,16 +28,13 @@
 
 - [About](#about)
   - [Built With](#built-with)
-      - [Software](#software)
-      - [Tools](#tools)
+      - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
-    - [Cookiecutter template](#cookiecutter-template)
-    - [Manual setup](#manual-setup)
-    - [Variables reference](#variables-reference)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
+    - [Installation](#installation)
+    - [References](#references)
+- [Development Roadmap](#development-roadmap)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -52,142 +48,139 @@
 <tr>
 <td>
 
-Open Source Software is not about the code in the first place but the communications and community. People love good documentation and obvious workflows. If your software solves some problem, but nobody can figure out how to use it or, for example, how to create an effective bug report, there's something very bad going on. Did you hear about Readme Driven Development? Check out the awesome [article written by GitHub co-founder Tom Preston-Werner](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html).
+<span style= "font-weight:600;">Mail<span style= "color:red;">Watch</span> </span> was built with the purpose to notify you in real-time when your mail arrive. Depending where you live your mail box may be located on different part of the house or in other cases even outside. Other times the mail might come at.
 
-There are many great README or issues templates available on GitHub, however, you have to find them yourself and combine different templates yourself. In addition, if you want extensive docs like CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md or even advanced GitHub features like a pull request template, additional labels, code scanning, and automatic issue/PR closing and locking you have to do much more work. Your time should be focused on creating something **amazing**. You shouldn't be doing the same tasks over and over like creating your GitHub project template from scratch. Follow the **don’t repeat yourself** principle. Use a template **and go create something amazing**!
+In my personal case, my mailbox is located on the first floor, while the main living quarters are on the second and third floor. To stop the guessing game of when will the mail man arrives and to avoid investing in other platforms like Ring^TM^  I created this device.
 
-Key features of **Amazing GitHub Template**:
+Some other use cases for this project is notify the user when crucial  time/tempurature sensitive packages arrives or in general help people with disabilities and their caretakers 
 
-- Configurable README.md template
-- Configurable LICENSE template
-- Configurable CODE_OF_CONDUCT.md template
-- Configurable CONTRIBUTING.md template
-- Configurable SECURITY.md template
-- Configurable issues template
-- Pull request template
-- CODEOWNERS template
-- Additional labels template
-- Automatic locking for closed issues and PRs workflow
-- Automatic cleaning for stale issues and PRs workflow
-- Automatic label verification for PRs workflow
-- Automatic security code scanning workflow via CodeQL
+This backend is only meant to be use in the local area network using a Raspberry Pi 3/4  as the web server.
 
-<details open>
-<summary>Additional info</summary>
-<br>
-<span> Rpi</span>
+<span style="font-weight:600">Key features</span>
+<div>
 
+- Real-time notifications (powered by Pushover)
+- A simple web-based dashboard 
+- View mail arrival statistics
+- Only works within the local area network of you home
+  
 
-</details>
+</div>
+
 
 </td>
 </tr>
 </table>
 
 ### Built With
-##### Software
-- [FastAPI](https://github.github.com/gfm/)
-- [Postgres](https://github.com/cookiecutter/cookiecutter)
-- [Twilio](https://github.com/features/actions)
-##### Tools 
-
+##### Tech Stack
+- [FastAPI](https://fastapi.tiangolo.com/) - *FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints.*
+- [Unicorn](https://fastapi.tiangolo.com/) - *FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints.*
+- [PostgresSQL (SQLAlchemy)](https://www.sqlalchemy.org/) 
+- [Pushover](https://pushover.net/#apps) - *push notifications*
+- [TailwindCSS](https://tailwindcss.com/) - *used TailwindCSS CDN*
+- [DaisyUI](https://daisyui.com/) - *TailwindCSS Componet Library *
+- [Jinja2](https://palletsprojects.com/p/jinja/) - *HTML template*
+        <br />
+  *[Hardware Tech Stack]()*
 ## Getting Started
 
 ### Prerequisites
 
-The repo for the frontend of rp pico is [here]("https://github.com/zjacobsdev/rpi_pico_device")
 
-The recommended method to install **Amazing GitHub Template** is by using [Cookiecutter](https://github.com/cookiecutter/cookiecutter). For manual install please refer to [manual setup section](#manual-setup).
-
-The easiest way to install Cookiecutter is by running:
-
-```sh
-pip install --user cookiecutter
-```
-
-For other install options, please refer to [Cookiecutter installation manual](https://cookiecutter.readthedocs.io/en/latest/installation.html).
+- Make sure to have Postgres installed and running in your local setup
+    `alternative`
+   - Use `test.db` as a mock database
+    <br />
+- Set up an account with Pushover to get retrieve your API keys
 
 ### Usage
 
-#### Cookiecutter template
+####  Installation 
 
-After installing Cookiecutter, all you need to do is to run the following command:
+Please follow these steps for a *development* setup:
 
-```sh
-cookiecutter gh:dec0dOS/amazing-github-template
+1. Fork/Clone repository
+   In the terminal: 
+
+2. `virtualenv -p python3 env`
+3. `source env/bin/activate`
+4. `pip3 install -r requirements.txt`
+5. `unicorn server:app --reload`
+
+  *[Hardware Installation]()*
+
+#### References
+
+Preview of file structure:
+```bash
+├── app                
+│   ├── server.py      # this file makes "app" a "Python package"
+│   ├── requirements.py     # "main" module, e.g. import app.main
+│   ├── configs  # configurations
+│   │   ├── __init__.py  # makes "routers" a "Python subpackage"
+│   │   ├── settings.py     # "items" submodule, e.g. import app.routers.items
+│   │   └── database.py   
+│   │
+│   └── static  # media files eg. .png/.jpg 
+│   │    
+│   └── templates         # Jinja2 HTML templates
+│       ├── index.html  #  API Dashboard page
+│       └── admin.py     
 ```
 
-You will get an interactive prompt where you'll specify relevant options for your project (or the default value will be used).
+####Enviorment Variables
 
-![Preview](docs/images/preview.svg)
+Use `.env.sample` file  
 
-#### Manual setup
-
-Please follow these steps for manual setup:
-
-1. [Download the precompiled template](https://github.com/dec0dOS/amazing-github-template/releases/download/latest/template.zip)
-2. Replace all the [variables](#variables-reference) to your desired values
-3. Initialize the repo in the precompiled template folder
-
-    `or`
-
-    Move the necessary files from precompiled template folder to your existing project directory. Don't forget the `.github` directory that may be hidden by default in your operating system
-
-#### Variables reference
-
-Please note that entered values are case-sensitive.
-Default values are provided as an example to help you figure out what should be entered.
-
-> On manual setup, you need to replace only values written in **uppercase**.
-
-| Name                       | Default value      | Description                                                                 |
+| Variable Name              | Value Type         | Description                                                                 |
 | -------------------------- | ------------------ | --------------------------------------------------------------------------- |
-| PROJECT_NAME               | My Amazing Project | Your project name                                                           |
-| REPO_SLUG                  | my-amazing-project | Repo slug must match the GitHub repo URL slug part                          |
-| GITHUB_USERNAME            | dec0dOS            | Your GitHub username **without @**                                          |
-| FULL_NAME                  | Alexey Potapov     | Your full name                                                              |
-| OPEN_SOURCE_LICENSE        | MIT license        | Full OSS license name                                                       |
-| modern_header              | y                  | Use HTML to prettify your header                                            |
-| table_in_about             | n                  | Use table to wrap around About section                                      |
-| include_logo               | y                  | Include Logo section. Only valid when `modern_header == y`          |
-| include_badges             | y                  | Include section for badges                                                  |
-| include_toc                | y                  | Include Table of Contents                                                   |
-| include_screenshots        | y                  | Include Screenshots section                                                 |
-| include_project_assistance | y                  | Include Project assistance section                                          |
-| include_authors            | y                  | Include Authors & contributors section                                      |
-| include_security           | y                  | Include Security section and SECURITY.md file                               |
-| include_acknowledgements   | y                  | Include Acknowledgements section                                            |
-| include_code_of_conduct    | y                  | Include CODE_OF_CONDUCT.md file                                             |
-| include_workflows          | y                  | Include .github/workflows directory                                         |
-| use_codeql                 | y                  | Use [CodeQL](https://securitylab.github.com/tools/codeql/)                  |
-| use_conventional_commits   | y                  | Add [Conventional Commits](https://www.conventionalcommits.org) notice      |
-| use_github_discussions     | n                  | Use [GitHub Discussions](https://docs.github.com/en/discussions/quickstart) |
+| DATABASE_URL              |  *string (url)* | URL of local postgres database                                               |
+| PUSHOVER_API_TOKEN           |       *string*    | api token for Pushover                                 |
+| PUSHOVER_USER_KEY                | *string*    | user key for Pushover                                                      |
 
-> NOTICE: to use GitHub Discussions, you have to [enable it first](https://docs.github.com/en/discussions/quickstart).
 
-## Roadmap
+## Development Roadmap
+<table>
+<tr>
+<th>
+In the Works</th>
+<th> Down the Road </th>
+</tr>
+<tr>
+<td style ="vertical-align:top">
 
-See the [open issues](https://github.com/dec0dOS/amazing-github-template/issues) for a list of proposed features (and known issues).
+  :heavy_check_mark: Save device data in csv file
+- Saving device data in db
 
-- [Top Feature Requests](https://github.com/dec0dOS/amazing-github-template/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
-- [Top Bugs](https://github.com/dec0dOS/amazing-github-template/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
-- [Newest Bugs](https://github.com/dec0dOS/amazing-github-template/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+</td>
+<td style ="vertical-align:top">
 
-## Contributing
+  - Testing 
+    - test end  points with pytest
+  - Add seperate frontend client
+   - Deployment 
+     - AWS or create local server
+     - implement tests
+   - Better mangange git Commits
+     - precommit vs husky
+   - Watchdog
+   - Device Settings
+     - Ability to add, delete, update device info
+   - IoT Security and Authentation
+     - need more research
+   - Analysis
+     - what the est. time of day does the mail come
+     - did the mail com
+   - Features
+     - Add USPS/UPS/FEDEX packages
 
-First off, thanks for taking the time to contribute! Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.
+</td>
+</tr>
+</table>
+<!-- 
 
-Please try to create bug reports that are:
-
-- _Reproducible._ Include steps to reproduce the problem.
-- _Specific._ Include as much detail as possible: which version, what environment, etc.
-- _Unique._ Do not duplicate existing opened issues.
-- _Scoped to a Single Bug._ One bug per report.
-
-Please adhere to this project's [code of conduct](docs/CODE_OF_CONDUCT.md).
-
-You can use [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) to check for common markdown style inconsistency.
-
+[![made with hearth by dec0dOS](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-dec0dOS-ff1414.svg?style=flat-square)](https://github.com/dec0dOS) -->
 
 ## License
 
@@ -197,5 +190,6 @@ See [LICENSE](LICENSE) for more information.
 
 ## Acknowledgements
 
-Thanks for these awesome resources that were used during the development of the **Amazing GitHub template**:
+Thanks in advance to anyone who contributes in growing this project in any way
+
 
