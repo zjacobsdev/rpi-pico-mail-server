@@ -35,7 +35,9 @@ ______backend______
   - [Usage](#usage)
     - [Installation](#installation)
     - [References](#references)
+    - [Enviorment Variables](#enviorment-variables)
 - [Development Roadmap](#development-roadmap)
+- [Photos](#photos)
 - [Acknowledgements](#acknowledgements)
 
 </details>
@@ -131,7 +133,7 @@ Preview of file structure:
 │       └── admin.py     
 ```
 
-####Enviorment Variables
+#### Enviorment Variables
 
 Use `.env.sample` file  
 
@@ -180,19 +182,10 @@ In the Works</th>
 </td>
 </tr>
 </table>
-<!-- 
 
-[![made with hearth by dec0dOS](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-dec0dOS-ff1414.svg?style=flat-square)](https://github.com/dec0dOS) -->
-
-##Photos
+## Photos
 Dashboard: Mobile
 <img alt="dashboard" width="200px" src="misc/img/Good%20Morning,%20Zahmir%20(1).jpg" />
-<!-- ## License
-
-This project is licensed under the **MIT license**. Feel free to edit and distribute this template as you like.
-
-See [LICENSE](LICENSE) for more information. -->
-
 ## Acknowledgements
 
 Thanks in advance to anyone who contributes in growing this project in any way
