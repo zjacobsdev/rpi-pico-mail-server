@@ -1,5 +1,6 @@
 <h1 align="center">
 <span>Mail<span style= "color:red">Watch</span></span>
+<img alt="alt_text" width="70px" src="misc/img/5a225605692e79.0157238815121996854308.png" style="padding-right:10px ">
 <h4 align="center">
 ______backend______
 </h4>
@@ -35,12 +36,14 @@ ______backend______
     - [Installation](#installation)
     - [References](#references)
 - [Development Roadmap](#development-roadmap)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 </details>
 
 ---
+Dashboard Concept: Desktop 
+<img alt="dashboard" src="misc/img/Good%20Morning,%20Zahmir.jpg" />
+
 
 ## About
 
@@ -81,8 +84,7 @@ This backend is only meant to be use in the local area network using a Raspberry
 - [TailwindCSS](https://tailwindcss.com/) - *used TailwindCSS CDN*
 - [DaisyUI](https://daisyui.com/) - *TailwindCSS Componet Library *
 - [Jinja2](https://palletsprojects.com/p/jinja/) - *HTML template*
-        <br />
-  *[Hardware Tech Stack]()*
+  More about the *[Hardware Tech Stack]()*
 ## Getting Started
 
 ### Prerequisites
@@ -182,11 +184,14 @@ In the Works</th>
 
 [![made with hearth by dec0dOS](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-dec0dOS-ff1414.svg?style=flat-square)](https://github.com/dec0dOS) -->
 
-## License
+##Photos
+Dashboard: Mobile
+<img alt="dashboard" width="200px" src="misc/img/Good%20Morning,%20Zahmir%20(1).jpg" />
+<!-- ## License
 
 This project is licensed under the **MIT license**. Feel free to edit and distribute this template as you like.
 
-See [LICENSE](LICENSE) for more information.
+See [LICENSE](LICENSE) for more information. -->
 
 ## Acknowledgements
 
