@@ -43,8 +43,11 @@ ______backend______
 </details>
 
 ---
-Dashboard Concept: Desktop 
-<img alt="dashboard" src="misc/img/Good%20Morning,%20Zahmir.jpg" />
+<figcaption align = "center"><b>Dashboard Concept</b></figcaption>
+<img style="padding-top:30px;" alt="dashboard" src="misc/img/Good%20Morning,%20Zahmir.jpg" />
+<figcaption align = "left"><b>Photo of the device</b></figcaption>
+<img style="padding-top:10px" alt="photo" width="600px" src="misc/img/photo1.jpg" />
+
 
 
 ## About
@@ -119,11 +122,11 @@ Please follow these steps for a *development* setup:
 Preview of file structure:
 ```bash
 ├── app                
-│   ├── server.py      # this file makes "app" a "Python package"
-│   ├── requirements.py     # "main" module, e.g. import app.main
+│   ├── server.py      
+│   ├── requirements.py     
 │   ├── configs  # configurations
-│   │   ├── __init__.py  # makes "routers" a "Python subpackage"
-│   │   ├── settings.py     # "items" submodule, e.g. import app.routers.items
+│   │   ├── __init__.py
+│   │   ├── settings.py    
 │   │   └── database.py   
 │   │
 │   └── static  # media files eg. .png/.jpg 
@@ -184,10 +187,16 @@ In the Works</th>
 </table>
 
 ## Photos
-Dashboard: Mobile
+
+<figcaption align = "left"><b>Dashboard Concept: Mobile</b></figcaption>
 <img alt="dashboard" width="200px" src="misc/img/Good%20Morning,%20Zahmir%20(1).jpg" />
+<figcaption align = "left"><b>Wiring Diagram</b></figcaption>
+<img alt="diagram" width="600px" src="misc/img/device_wiring_diagram.jpg" />
+<figcaption align = "left"><b>Photo of the device</b></figcaption>
+<img style="padding-top:10px" alt="photo" width="600px" src="misc/img/photo1.jpg" />
+
 ## Acknowledgements
 
-Thanks in advance to anyone who contributes in growing this project in any way
+Thanks in advance to anyone who contributes in growing this project in anyway
 
 
