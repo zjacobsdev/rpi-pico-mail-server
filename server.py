@@ -16,7 +16,8 @@ async def root():
 async def send_mailbox_status_notification(request:Request):
     request = await request.json()
     response =  pushDeviceAlert(request)
-    print('mailbox-status:', request)
+    if not response:
+         return{ "message":"Problem with push notification"}
     return {"message": response}
 
 app.include_router(device.router)
