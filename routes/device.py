@@ -6,7 +6,7 @@ router = APIRouter()
 @router.get('/device', tags=["Device"],response_model=DeviceResponseBase, deprecated=True)
 async def get_device_info():
     try:
-        #potential securityfeature
+        #security feature
         # if(!device_name)
         #     return {"message": "Device Infomation"}
       return {"message": "Device Infomation"}

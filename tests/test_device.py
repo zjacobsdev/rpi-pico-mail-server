@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-# from ..server import app
+from ..server import app
 '''
 Testing API
 References: https://fastapi.tiangolo.com/tutorial/testing/
