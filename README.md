@@ -43,10 +43,7 @@ ______backend______
 </details>
 
 ---
-<figcaption align = "center"><b>Dashboard Concept</b></figcaption>
-<img style="padding-top:30px;" alt="dashboard" src="misc/img/Good%20Morning,%20Zahmir.jpg" />
-<figcaption align = "left"><b>Photo of the device</b></figcaption>
-<img style="padding-top:10px" alt="photo" width="600px" src="misc/img/photo1.jpg" />
+
 
 
 
@@ -56,13 +53,13 @@ ______backend______
 <tr>
 <td>
 
-<span style= "font-weight:600;">Mail<span style= "color:red;">Watch</span> </span> was built with the purpose to notify you in real-time when your mail arrive. Depending where you live your mail box may be located on different part of the house or in other cases even outside. Other times the mail might come at.
+<span style= "font-weight:600;">Mail <span style= "color:red;">Watch</span> </span> was built with the purpose to notify you in real-time when your mail arrive. Depending where you live your mail box may be located on different part of the house or in other cases even outside. Other times the mail might come at.
 
-In my personal case, my mailbox is located on the first floor, while the main living quarters are on the second and third floor. To stop the guessing game of when will the mail man arrives and to avoid investing in other platforms like Ring^TM^  I created this device.
+In my personal case, my mailbox is located on the first floor, while the main living quarters are on the second and third floor. To stop the guessing game of when will the mail man arrives and to avoid investing in other platforms like Ring ^TM^  I created this device.
 
 Some other use cases for this project is notify the user when crucial  time/tempurature sensitive packages arrives or in general help people with disabilities and their caretakers 
 
-This backend is only meant to be use in the local area network using a Raspberry Pi 3/4  as the web server.
+*This backend project is only meant to be use in the local area network using a Raspberry Pi 3/4  as the web server.* 
 
 <span style="font-weight:600">Key features</span>
 <div>
@@ -87,9 +84,9 @@ This backend is only meant to be use in the local area network using a Raspberry
 - [PostgresSQL (SQLAlchemy)](https://www.sqlalchemy.org/) 
 - [Pushover](https://pushover.net/#apps) - *push notifications*
 - [TailwindCSS](https://tailwindcss.com/) - *used TailwindCSS CDN*
-- [DaisyUI](https://daisyui.com/) - *TailwindCSS Componet Library *
-- [Jinja2](https://palletsprojects.com/p/jinja/) - *HTML template*
-  More about the *[Hardware Tech Stack]()*
+- [DaisyUI](https://daisyui.com/) - *TailwindCSS Componet Library*
+- [Jinja2](https://palletsprojects.com/p/jinja/) - *HTML templating*
+ *[Hardware Tech Stack](https://github.com/zjacobsdev/rpi_pico_device)*
 ## Getting Started
 
 ### Prerequisites
@@ -123,17 +120,19 @@ Preview of file structure:
 ```bash
 ├── app                
 │   ├── server.py      
-│   ├── requirements.py     
+│   ├── requirements.py
+|   ├── models.py
+|   ├── .env.sample   
+|   ├── tests
+|   ├── routes
+|   ├── services       
 │   ├── configs  # configurations
 │   │   ├── __init__.py
 │   │   ├── settings.py    
-│   │   └── database.py   
-│   │
-│   └── static  # media files eg. .png/.jpg 
-│   │    
+│   │   └── database.py     
 │   └── templates         # Jinja2 HTML templates
 │       ├── index.html  #  API Dashboard page
-│       └── admin.py     
+│       └── admin.py  
 ```
 
 #### Enviorment Variables
@@ -188,12 +187,17 @@ In the Works</th>
 
 ## Photos
 
-<figcaption align = "left"><b>Dashboard Concept: Mobile</b></figcaption>
-<img alt="dashboard" width="200px" src="misc/img/Good%20Morning,%20Zahmir%20(1).jpg" />
-<figcaption align = "left"><b>Wiring Diagram</b></figcaption>
-<img alt="diagram" width="600px" src="misc/img/device_wiring_diagram.jpg" />
-<figcaption align = "left"><b>Photo of the device</b></figcaption>
+<figcaption align = "center"><b>Dashboard Concept</b></figcaption>
+<img style="padding-top:20px; padding-bottom:20px" alt="dashboard" src="misc/img/Good%20Morning,%20Zahmir.jpg" />
+
+<figcaption align = "center"><b>Dashboard Concept: Mobile</b></figcaption>
+<p align="center">
+<img style="padding-top:20px;" alt="dashboard-mobile" width="200px" src="misc/img/Good%20Morning,%20Zahmir%20(1).jpg" />
+</p>
+<figcaption align = "center"><b>Photo of the device (Barebones)</b></figcaption>
 <img style="padding-top:10px" alt="photo" width="600px" src="misc/img/photo1.jpg" />
+<figcaption align = "center"><b>Wiring Diagram</b></figcaption>
+<img alt="diagram" width="600px" src="misc/img/device_wiring_diagram.jpg" />
 
 ## Acknowledgements
 
